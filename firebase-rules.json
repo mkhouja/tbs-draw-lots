@@ -1,0 +1,13 @@
+{
+  "rules": {
+    "claims": {
+      "$roundId": {
+        ".read": true,
+        ".write": true,
+        "$claimId": {
+          ".validate": "newData.hasChildren(['clientId','snippetId','claimedAt']) && newData.child('clientId').isString() && newData.child('snippetId').isString()"
+        }
+      }
+    }
+  }
+}
